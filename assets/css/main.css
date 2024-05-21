@@ -212,7 +212,7 @@ a {
   -ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
   border-bottom: dotted 1px;
-  color: #4eb980;
+  color: #af8f6f;
   text-decoration: none;
 }
 
@@ -2202,7 +2202,7 @@ input[type="email"]:focus,
 select:focus,
 textarea:focus {
   background: rgba(224, 224, 224, 0.15);
-  border-color: #4eb980;
+  border-color: #af8f6f;
 }
 
 input[type="text"],
