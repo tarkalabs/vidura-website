@@ -132,6 +132,14 @@ q:after {
   content: none;
 }
 
+img {
+  max-width: 100%;
+}
+
+video {
+  max-width: 100%;
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -3246,6 +3254,16 @@ input[type="button"].small,
 
   header p {
     font-size: 0.8em;
+  }
+
+  #header .name {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: 22px;
   }
 
   header.major {
