@@ -19,3 +19,6 @@ Credits:
 	Other:
 		jQuery (jquery.com)
 		Responsive Tools (github.com/ajlkn/responsive-tools)
+	
+	Color Palette:
+		https://colorhunt.co/palette/cde8e5eef7ff7ab2b24d869c
