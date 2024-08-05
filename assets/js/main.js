@@ -49,6 +49,7 @@ function submitForm() {
     noteElem.textContent = "Please fill all fields marked *";
   } else {
     button.disabled = true;
+    noteElem.textContent = "";
     button.textContent = "Processing...";
     fetch(formSubmitUrl, {
       method: "POST",
@@ -58,7 +59,7 @@ function submitForm() {
         button.textContent = "Thank you! We will reach out to you soon";
         setTimeout(() => {
           showContactUs(false);
-        }, 2000);
+        }, 3000);
       })
       .catch(function (err) {
         button.textContent = "☹";

@@ -350,6 +350,7 @@ button.hero.icon:after {
   justify-content: center;
   align-items: center;
   background-color: #0000005c;
+  overflow: auto;
 }
 
 .contact-us > div {
@@ -585,11 +586,18 @@ textarea {
   .contact-us > div {
     width: auto;
     margin: 10px;
+    padding: 20px;
   }
 
   .contact-us .close {
     top: 24px;
     right: 26px;
+  }
+
+  .contact-us input,
+  textarea {
+    padding: 10px;
+    margin: 5px 0px 15px 0px;
   }
 
   .footer {
