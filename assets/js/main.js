@@ -2,7 +2,7 @@
 const mobileBreakpoint = 768;
 if (window.innerWidth < mobileBreakpoint) {
   document.querySelector(".demo-video video").src =
-    "/assets/videos/vidura-demo-mobile.mp4";
+    "assets/videos/vidura-demo-mobile.mp4";
 }
 
 // Add click handlers for contact us form
