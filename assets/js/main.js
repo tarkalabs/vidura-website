@@ -1,29 +1,70 @@
-/*
-	Directive by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+// Change the video source for mobile
+const mobileBreakpoint = 768;
+if (window.innerWidth < mobileBreakpoint) {
+  document.querySelector(".demo-video video").src =
+    "/assets/videos/vidura-demo-mobile.mp4";
+}
 
-(function($) {
+// Add click handlers for contact us form
+let ctas = document.getElementsByClassName("get-started");
+for (let cta of ctas) {
+  cta.addEventListener("click", function () {
+    showContactUs(true);
+  });
+}
 
-	var	$window = $(window),
-		$body = $('body');
+function showContactUs(show) {
+  document.getElementById("first-contact").style.display = show
+    ? "block"
+    : "none";
+}
 
-	// Breakpoints.
-		breakpoints({
-			wide:      [ '1281px',  '1680px' ],
-			normal:    [ '981px',   '1280px' ],
-			narrow:    [ '841px',   '980px'  ],
-			narrower:  [ '737px',   '840px'  ],
-			mobile:    [ '481px',   '736px'  ],
-			mobilep:   [ null,      '480px'  ]
-		});
+// Show contact us in the header after scrolling out above the fold contact us hero button
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    // Hero CTA is out of the viewport. Show the CTA button in the header
+    let mainCTANotVisible = entry.intersectionRatio == 0;
+    document.querySelector(".header .hero").style.display = mainCTANotVisible
+      ? "block"
+      : "none";
+  });
+});
+observer.observe(document.querySelector(".cta .hero"));
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+// Contact us form submit logic
+// const formSubmitUrl = "https://tarkalabs.com";
+const formSubmitUrl =
+  "https://getform.io/f/0156bf4e-da33-4ecd-96a5-b1273602419a";
+function submitForm() {
+  const form = document.getElementById("contact-us-form");
+  const formData = new FormData(form);
+  const error =
+    formData.get("fullname").trim() == "" ||
+    formData.get("orgname").trim() == "" ||
+    !document.querySelector(".contact-us input[type='email']").checkValidity();
 
-})(jQuery);
+  const noteElem = document.querySelector(".form-footer > .note");
+  const button = document.querySelector(".form-footer > button");
+  if (error) {
+    noteElem.textContent = "Please fill all fields marked *";
+  } else {
+    button.disabled = true;
+    button.textContent = "Processing...";
+    fetch(formSubmitUrl, {
+      method: "POST",
+      body: formData,
+    })
+      .then(function (resp) {
+        button.textContent = "Thank you! We will reach out to you soon";
+        setTimeout(() => {
+          showContactUs(false);
+        }, 2000);
+      })
+      .catch(function (err) {
+        button.textContent = "☹";
+        noteElem.innerHTML =
+          "Oops! Something went wrong. We are looking at it.</br>You can reach out to <b>hello@tarkalabs.com</b> meanwhile";
+        console.log("err", err);
+      });
+  }
+}
