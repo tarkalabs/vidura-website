@@ -511,6 +511,10 @@ textarea {
     height: auto;
   }
 
+  .sub-cards > .card {
+    width: 100%;
+  }
+
   .bfe {
     padding: 0 24px;
     text-align: left;
