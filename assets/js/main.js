@@ -32,9 +32,7 @@ const observer = new IntersectionObserver((entries) => {
 observer.observe(document.querySelector(".cta .hero"));
 
 // Contact us form submit logic
-// const formSubmitUrl = "https://tarkalabs.com";
-const formSubmitUrl =
-  "https://getform.io/f/0156bf4e-da33-4ecd-96a5-b1273602419a";
+const formSubmitUrl = "https://formkeep.com/f/e63603fe5315";
 function submitForm() {
   const form = document.getElementById("contact-us-form");
   const formData = new FormData(form);
