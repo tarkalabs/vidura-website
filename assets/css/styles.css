@@ -420,6 +420,7 @@ textarea {
 .footer a {
   text-decoration: none;
   color: #1c3f3a;
+  border-bottom: 1px solid #1c3f3a;
 }
 
 .footer .heart {
@@ -428,7 +429,7 @@ textarea {
 
 @media (max-width: 768px) {
   .header > div {
-    padding: 16px 24px;
+    padding: 8px 16px;
   }
 
   /* .header button {
