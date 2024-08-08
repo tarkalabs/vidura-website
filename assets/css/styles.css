@@ -178,7 +178,7 @@ button.hero.icon:after {
   border-radius: 20px;
   margin-top: 180px;
   background: #1c3f3a;
-  background-image: url("/images/corner.svg");
+  background-image: url("images/corner.svg");
   background-repeat: no-repeat;
   background-position: top right;
 }
@@ -265,7 +265,7 @@ button.hero.icon:after {
 
 .testimonials::before {
   content: "";
-  background-image: url("/images/ellipsis.png");
+  background-image: url("images/ellipsis.png");
   width: 80px;
   height: 80px;
   position: absolute;
@@ -532,7 +532,7 @@ textarea {
   }
 
   .bfe img {
-    content: url("/images/architecture-mobile.png");
+    content: url("images/architecture-mobile.png");
     width: 100%;
     box-sizing: border-box;
     margin-top: 24px;
