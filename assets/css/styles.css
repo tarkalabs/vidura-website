@@ -25,7 +25,7 @@ h1 {
   font-style: normal;
   font-weight: 400;
   line-height: 80px;
-  margin-top: 258px;
+  margin-top: 175px;
 }
 
 h2 {
@@ -116,6 +116,26 @@ button.hero.icon:after {
   border-radius: 5px;
 }
 
+.floating-nav {
+  display: flex;
+  gap: 10px;
+  background-color: #ffffff75;
+  backdrop-filter: blur(6px);
+  border-radius: 5px;
+}
+
+.floating-nav a {
+  font-size: 18px;
+  line-height: inherit;
+  text-align: center;
+  display: inline-block;
+  margin: 5px;
+  padding: 5px 10px;
+  color: #1c3f3a;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
 .highlight {
   border-radius: 16px 16px 0px 16px;
   background: var(--Brand-primary, #9ef01a);
@@ -128,7 +148,7 @@ button.hero.icon:after {
 
 .atf h1 {
   width: 735px;
-  margin: 258px auto 50px;
+  margin: 175px auto 50px;
 }
 
 .desc {
@@ -144,7 +164,7 @@ button.hero.icon:after {
 }
 
 .desc img {
-  width: 500px;
+  width: 400px;
 }
 
 .demo-video {
@@ -162,10 +182,10 @@ button.hero.icon:after {
   height: 500px;
 }
 
-.demo-video p {
+.demo-video h4 {
   font-size: 28px;
   line-height: 1.6em;
-  margin-bottom: 80px;
+  margin-bottom: 20px;
   margin-top: 0;
 }
 

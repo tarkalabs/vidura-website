@@ -33,7 +33,10 @@
       property="og:description"
       content="Safe & Secure GenAI bot for your organisation needs"
     />
-    <meta property="og:image" content="https://vidurabot.com/images/vidura-banner.png" />
+    <meta
+      property="og:image"
+      content="https://vidurabot.com/images/vidura.png"
+    />
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -46,7 +49,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://vidurabot.com/images/vidura-banner.png"
+      content="https://vidurabot.com/images/vidura.png"
     />
 
     <!-- Meta Tags Generated via https://www.opengraph.xyz -->
@@ -55,18 +58,25 @@
     <section class="header">
       <div>
         <h1>VIDURA</h1>
-        <button class="hero get-started" style="display: none">
-          Get Started
-        </button>
+        <nav class="floating-nav">
+          <a href="#usecases">Usecases</a>
+          <a href="#features">Features</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <div style="width: 150px">
+          <button class="hero get-started" style="display: none">
+            Get Started
+          </button>
+        </div>
       </div>
     </section>
 
     <div class="contents">
       <section class="atf">
         <h1>
-          <span class="highlight">AI search</span>
+          <span class="highlight">Converse</span>
           <img style="vertical-align: bottom" src="images/star.svg" />
-          engine for your organisation's vast document store
+          with your organisation's vast data store
         </h1>
         <div class="cta">
           <button class="hero icon get-started">Get Started</button>
@@ -76,24 +86,30 @@
       <section class="desc">
         <div>
           <p>
-            VIDURA effortlessly scans and understands various file formats,
-            processing large document volumes with ease.
+            VIDURA is an LLM powered chatbot that effortlessly understands your
+            organisation by ingesting all its
+            <span class="highlight">documents</span> in any format, connects
+            with data <span class="highlight">APIs</span> and gives you required
+            information in an instant.
           </p>
           <p>
-            It swiftly answers specific questions based on document content,
-            making it an invaluable tool for efficient data analysis and
-            information retrieval in businesses.
+            Say goodbye to organisation's inefficiencies because of disconnected
+            knowledge silos
           </p>
         </div>
         <img src="images/lens.png" alt="Lens that looks at data cube" />
       </section>
 
-      <section class="demo-video">
-        <p>
+      <section class="demo-video" id="usecases">
+        <h4>
           <b>AskMAI</b> for
-          <a href="https://eam360.com/" target="_blank">EAM360</a> mobile app
-          <br />
-          powered by VIDURA
+          <a href="https://eam360.com/" target="_blank">EAM360</a>
+        </h4>
+        <p style="max-width: 600px; margin: auto; padding-bottom: 20px">
+          VIDURA lets technicians instantly access
+          <span class="highlight">equipment manuals</span> and
+          <span class="highlight">maintenance records</span> in IBM Maximo,
+          helping them fix failures faster
         </p>
         <video
           src="assets/videos/vidura-demo.mp4"
@@ -102,9 +118,10 @@
           loop
           controls
         ></video>
+        <p>Powered by VIDURA</p>
       </section>
 
-      <section class="features">
+      <section class="features" id="features">
         <h2>
           Features that <br />
           empowers vidura
