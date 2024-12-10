@@ -265,6 +265,7 @@ button.hero.icon:after {
 
 .bfe img {
   margin-top: 84px;
+  max-width: 100%;
 }
 
 .testimonials {
@@ -476,6 +477,7 @@ textarea {
     gap: 35px;
     padding: 0 24px;
     font-size: 18px;
+    width: 80%;
   }
 
   .desc img {
@@ -547,7 +549,7 @@ textarea {
 
   .bfe img {
     content: url("../../images/architecture-mobile.png");
-    width: 100%;
+    max-width: 100%;
     box-sizing: border-box;
     margin-top: 24px;
   }
